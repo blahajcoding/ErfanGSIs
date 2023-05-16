@@ -1,18 +1,12 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Build GSI
+run-name: balls
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  gsi time:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Check out repository code
         uses: actions/checkout@v3
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Setting up
+        uses: bash setup.sh 
+      - name: ./url2GSI.sh https://doc-14-1s-docs.googleusercontent.com/docs/securesc/of49kt1iiv5fii1rcna54bkgp845roqp/2uuj5plnerkff5mf1f4um7gu3b4fe2n4/1684255350000/07130111822594113393/01626215558205996670/17E7-UEtVGn9rv2kkWj7DfClWjUwnh6HM?e=download&ax=ADWCPKBhK3GH43F7HAnsGPfCRsz9vLHPXKx9NqOxv02uqw9ixrt0vCgvF7ABkRrDTIVBLg9MYe7aQi_L455vIOrm1BtM4GtoMwvgo11TkqOVDNcp53PYmEBaegpE8I5_gYlpTjIVXK2OlclOPF-3SqbD3cDpqWsR8gvgaFHwTGvorN6VpA4FzafSsMp2t2si7nFupralJUZB2ASWcXtY5czwsvQBHdEC6xT1VLQPjxSD9c_FFZabbPXHFN51vgVNcSzCaBg24oiq0x9jb9JaiHxkyTz_ZbcLgcXikFE9ydFQMB6tdVm1goyB22kfZ_bhuNXJPs3t77qqxftArsWM17YlgXBfu2X5aQ7DdneCYM5P-xfV8nrc6EiUvP1rMesUqDqa5R63RFGAHDi8judnysKVfBwZxwR3z355WiyJeo1K6lsImejUFxGwFqQTYoHO_3sP8YmIh8aaKKBOMs3Ed8WSkibGvEc3DrH0WH3QPUXBqSCvXfGGv7DKxuIeR4UjhstBCMEtu6nRR9X-saXpqXlnwOilxKUW-vIhv0BKuoF391dw77BvP53W__eBvi5vwJSN0hwubnzDeWvyW-ecacdVIoDGXxq0X7hQOorgK9Mr5-ZXghqkziJM-cY9LuZQoC1FHIeeJB5ZW2bgWOQTYrf_CXDdnSMZzkxnkiS_J_ozMtJoHAsaR_oICMepY0ktoqrBqDoY5je2Pso0iNxI72jxRsvBPRlv6Q4IgrdiwIQyFmIsSj7IUsnGir7yIHt7rCaAvUCEKKfhEim5lCfHmBkVdBUcskhkMu1j7Y0svJrfTsfVSdzmEAhGQvxDwMru4ofEABRspmi95hqGWQo4pmzE9UUgVAAQJxoq_XqvAzHPip7u-T5GvzU2T4Hx3h8Fc8k&uuid=d92e3e78-b90a-4d0f-8893-730c78f4cb3a&authuser=0 AOSP
